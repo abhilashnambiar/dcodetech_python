@@ -1,0 +1,97 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Dec 19, 2019 at 06:12 AM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `py_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_credentials`
+--
+
+CREATE TABLE `user_credentials` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_credentials`
+--
+
+INSERT INTO `user_credentials` (`id`, `name`, `email`, `password`) VALUES
+(10, 'Abhilash', 'abhilash@gmail.com', 'abhilashn9'),
+(11, 'Aswanth', 'aswanth@gmail.com', 'aswanthn9'),
+(12, 'Nikhil', 'nikhil@gmail.com', 'nikhiln9'),
+(13, 'Suraj', 'suraj@gmail.com', 'surajn9'),
+(14, 'Pragil', 'pragil@gmail.com', 'pragil9'),
+(15, 'Vishnu', 'vishnu@gmail.com', 'vishnu'),
+(16, 'Arjun', 'arjun@gmail.com', 'arjun'),
+(17, 'Govind', 'govind@gmail.com', 'govind'),
+(18, 'Sandeep', 'sandeep@gmail.com', 'sandeep'),
+(19, 'Soham', 'soham@gmail.com', 'soham');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_data`
+--
+
+CREATE TABLE `user_data` (
+  `email` varchar(255) NOT NULL,
+  `img` longblob NOT NULL,
+  `dob` date NOT NULL,
+  `text` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `user_data`
+--
+
+INSERT INTO `user_data` (`email`, `img`, `dob`, `text`) VALUES
+('abhilash@gmail.com', 0x89504e470d0a1a0a0000000d4948445200000122000001220802000000d2dc48e1000003ec49444154789ceddd416edb4010004129f0ffbfec9c720b0807747b6699aabb434544630e1aecbe5e000000000000000000000000000000000000000000000000000000000000000000c01fefa9077f7e7e4e3d3af27ecf7c99d7dfe49d4fe51d7d975f234f85ff8acc202733c8c90c7232839ccc202733c8c90c723283dcc7f407f8bba95febafddd98ab8b3abb1731be379efa8639a414e66909319e464063999414e66909319e464063999416ee916c8b5ee97fe6eb3e1c43d8f3b4e7c471dd30c7232839ccc202733c8c90c7232839ccc202733c8c90c72476e813c4f776f4b775f0c5f679a414e66909319e464063999414e66909319e46406399941ce16c80fb97336865d8dd39966909319e464063999414e66909319e464063999414e66903b720be4c4ad883b37c29cb84172e23bea9866909319e464063999414e66909319e464063999414e66905bba057267ef61a73b37b34cfdedb5e7bda38e69063999414e66909319e464063999414e66909319e46406390736ac70e2691f7c9d69063999414e66909319e464063999414e66909319e46406b9b1058213cfc6e8ced5e84c7de6a9334876be05d30c7232839ccc202733c8c90c7232839ccc202733c8c90c724bb74076dab96170e29d2f539f6aea0d9a66909319e464063999414e66909319e464063999414e6690fb98fe00df6fe7f9163bb75ea6fe473bbf8d8e69063999414e66909319e464063999414e66909319e46406b98d875bbccebcc7e4c41d919ddfe4d4bfdc31cd202733c8c90c7232839ccc202733c8c90c7232839ccc20b7f127f3978d8a7f71e2e6cace5d8d8e69063999414e66909319e464063999414e66909319e46406b9a537c2dcd912d8b961f0bc9d89a97344aeedfcae4c33c8c90c7232839ccc202733c8c90c7232839ccc202733c88dfd643e75624767e7ed2a5337b35c9b3acd656a47c434839ccc202733c8c90c7232839ccc202733c8c90c723283dc03cf02e974db09cfdb7be84e73e9f65a3aa619e464063999414e66909319e464063999414e66909319e4966e815c3b7167a23bcfa37beeb5e7ed6a744c33c8c90c7232839ccc202733c8c90c7232839ccc202733c81db90572a2a93d8f3ba66eed79de6d41a619e464063999414e66909319e464063999414e66909319e46c81fc90ee2c906ebfe4da89cf9d3a83c434839ccc202733c8c90c7232839ccc202733c8c90c723283dc915b2027de2732b5e7d1ddf9d23971cfe39a69063999414e66909319e464063999414e66909319e46406b9a55b20cfbb13646a77a17beece6d8c9d9fca34839ccc202733c8c90c7232839ccc202733c8c90c723203000000000000000000000000000000000000000000000000000000000000000000e007fd06483af1c0abf099400000000049454e44ae426082, '0000-00-00', '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `user_credentials`
+--
+ALTER TABLE `user_credentials`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user_credentials`
+--
+ALTER TABLE `user_credentials`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
