@@ -58,7 +58,7 @@ def delete():
 
 def gettxt():
     if(flag.get() == 1):
-        txt = open("DCodetech/getTXT.txt", "a+")
+        txt = open("getTXT.txt", "a+")
         txt.seek(0)
         txt_data = txt.read()
 
@@ -84,7 +84,7 @@ def gettxt():
 
 def getpdf():
     if(flag.get() == 1):
-        pdf_txt = open("DCodetech/PDFtoTXT.txt", "a+")
+        pdf_txt = open("PDFtoTXT.txt", "a+")
         pdf_txt.seek(0)
         pdf_txt_data = pdf_txt.read()
 
@@ -110,7 +110,7 @@ def getpdf():
             for line in pdf_txt:
                 if ':' in line:
                     pdf.cell(20,10,line,ln=2)
-            pdf.output('DCodetech/getPDF.pdf')
+            pdf.output('getPDF.pdf')
             in_text.delete(1.0, "end")
             in_text.insert(INSERT, "Data added to getPDF.pdf")
             flag.set(0)
@@ -119,8 +119,8 @@ def getpdf():
 
 def getcsv():
     if(flag.get() == 1):
-        csv_exists = os.path.isfile("Dcodetech/getCSV.csv")
-        csv = open("DCodetech/getCSV.csv","a+",newline="")
+        csv_exists = os.path.isfile("getCSV.csv")
+        csv = open("getCSV.csv","a+",newline="")
         csv.seek(0)
         csv_data = csv.read()
 
